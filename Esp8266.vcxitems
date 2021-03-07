@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{E4763A70-F18A-4E12-ABF1-B535E4003543}</ItemsProjectGuid>
+    <ItemsSccProjectName>$/Shared/Esp8266</ItemsSccProjectName>
+    <ItemsSccAuxPath>https://svenbieg.visualstudio.com</ItemsSccAuxPath>
+    <ItemsSccLocalPath>.</ItemsSccLocalPath>
+    <ItemsSccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</ItemsSccProvider>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Cpu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Gpio\AnalogHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Gpio\ImpulsePin.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Gpio\PwmHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\I2C\I2CHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\MemoryClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Mutex.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Network\WiFi\WiFiHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)System.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Configuration.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Platform.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Default.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Default.targets" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\partitions.csv" />
+    <None Include="$(MSBuildThisFileDirectory)Readme.md" />
+    <None Include="$(MSBuildThisFileDirectory)sdkconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\ClockHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Cpu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Gpio\AnalogHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Gpio\ImpulsePin.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Gpio\PwmHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\MemoryClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Main.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Mutex.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Network\WiFi\WiFiHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)System.cpp" />
+  </ItemGroup>
+</Project>

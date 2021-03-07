@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Esp8266 Debug|Win32">
+      <Configuration>Esp8266 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Esp8266 Release|Win32">
+      <Configuration>Esp8266 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetConfig Condition="'$(Configuration)'=='Esp8266 Debug'">Debug</TargetConfig>
+    <TargetConfig Condition="'$(Configuration)'=='Esp8266 Release'">Release</TargetConfig>
+    <TargetPlatform Condition="'$(Configuration)'=='Esp8266 Debug'">Esp8266</TargetPlatform>
+    <TargetPlatform Condition="'$(Configuration)'=='Esp8266 Release'">Esp8266</TargetPlatform>
+  </PropertyGroup>
+</Project>

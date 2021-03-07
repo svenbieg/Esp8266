@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(SolutionDir)Esp\Configuration\Default.props" />
+  <PropertyGroup>
+    <!-- Directories -->
+    <IdfPath>$(HomePath).espressif\esp8266_rtos_sdk\</IdfPath>
+    <CompilerPath>$(IdfToolsPath)xtensa-lx106-elf\esp-2020r3-49-gd5524c1-8.4.0\xtensa-lx106-elf\</CompilerPath>
+    <IdfExtraComponentDir>Esp8266\Components</IdfExtraComponentDir>
+    <!-- Settings -->
+    <ComPortBaud>74880</ComPortBaud>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Preprocessor -->
+    <PreprocessorList Include="ESP8266" />
+    <!-- Include -->
+    <IdfIncludeList Include="$(VC_IncludePath)" />
+    <IdfIncludeList Include="$(IdfPath)components\app_update\include" />
+    <IdfIncludeList Include="$(IdfPath)components\bootloader_support\include" />
+    <IdfIncludeList Include="$(IdfPath)components\esp_common\include" />
+    <IdfIncludeList Include="$(IdfPath)components\esp_event\include" />
+    <IdfIncludeList Include="$(IdfPath)components\esp_ringbuf\include" />
+    <IdfIncludeList Include="$(IdfPath)components\esp8266\include" />
+    <IdfIncludeList Include="$(IdfPath)components\freertos\include" />
+    <IdfIncludeList Include="$(IdfPath)components\freertos\include\freertos\private" />
+    <IdfIncludeList Include="$(IdfPath)components\freertos\port\esp8266\include\freertos" />
+    <IdfIncludeList Include="$(IdfPath)components\heap\include" />
+    <IdfIncludeList Include="$(IdfPath)components\heap\port\esp8266\include" />
+    <IdfIncludeList Include="$(IdfPath)components\log\include" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\include\lwip\apps\dhcpserver" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\include\lwip\apps\ping" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\include\lwip\apps\sntp" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\include\lwip\apps" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\lwip\src\include" />
+    <IdfIncludeList Include="$(IdfPath)components\lwip\port\esp8266\include" />
+    <IdfIncludeList Include="$(IdfPath)components\newlib\include" />
+    <IdfIncludeList Include="$(IdfPath)components\nvs_flash\include" />
+    <IdfIncludeList Include="$(IdfPath)components\spi_flash\include" />
+    <IdfIncludeList Include="$(IdfPath)components\tcpip_adapter\include" />
+  </ItemGroup>
+</Project>
