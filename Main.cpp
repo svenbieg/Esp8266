@@ -36,7 +36,6 @@ setenv("TZ", "CET-1CEST,M3.5.0,M10.5.0/3", true);
 tzset();
 System::Memory=new Memory();
 Clock::Current=new Clock();
-SerialPort::Current=new SerialPort(0, BaudRate::Baud74880);
 auto pdesc=esp_ota_get_app_description();
 Application::Version=pdesc->version;
 Initialize();
